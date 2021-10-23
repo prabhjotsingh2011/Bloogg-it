@@ -21,17 +21,19 @@ app.use('/',router)
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
 
-    const path = require('path');
-    app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+
 }
 
+
+
+
+
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
+
+connection(username,password)
 
 
 app.listen(PORT, () => {
     console.log(`server is running at ${PORT}`);
 })
-
-const URL = 'mongodb+srv://prabhjot:prabhjot@cluster0.vbsux.mongodb.net/Bloggerdev?retryWrites=true&w=majority'
-
-connection(process.env.MONGODB_URI || URL)
