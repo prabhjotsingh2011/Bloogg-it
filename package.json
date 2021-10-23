@@ -1,6 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.8.0.",
+    "npm": "7.21.0"
+  },
   "description": "",
   "main": "server.js",
   "type": "module",
@@ -8,8 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "client-install": "cd client && npm install",
-    "client-build":"cd client && npm run build",
-    "heroku-postbuild":"npmrun client-install && npm run client build"
+    "client-build": "cd client && npm run build",
+    "heroku-postbuild": "npmrun client-install && npm run client build"
   },
   "keywords": [],
   "author": "",
