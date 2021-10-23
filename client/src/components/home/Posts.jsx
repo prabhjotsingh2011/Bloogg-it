@@ -22,7 +22,7 @@ const Posts = () => {
             setPosts(allpossts)
         }
         fetchData();
-
+        console.log(posts);
     }, [search]);
 
     return (

@@ -5,8 +5,9 @@ const connection = async (username,password) => {
 
     try {
         const URL = `mongodb+srv://${username}:${password}@cluster0.vbsux.mongodb.net/Bloggerdev?retryWrites=true&w=majority`
+        const URL_for_development = `mongodb+srv://prabhjot:prabhjot@cluster0.vbsux.mongodb.net/Bloggerdev?retryWrites=true&w=majority`
         
-        await mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
+        await mongoose.connect(URL_for_development, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("Database connected successfully");
     } catch (error) {
         console.log('====================================');
